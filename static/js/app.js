@@ -65,6 +65,15 @@ function buildCharts(sample) {
     // @TODO: Build a Pie Chart
     // HINT: You will need to use slice() to grab the top 10 sample_values,
     // otu_ids, and labels (10 each).
+    var data = [{
+      values: sizeValue.slice(0, 9),
+      labels: xValue.slice(0, 9),
+      text: yValue.slice(0, 9),
+      type: 'pie'
+    }];
+    Plotly.newPlot('pie', data);
+  });
+}
 
 
 function init() {
